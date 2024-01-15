@@ -9,6 +9,7 @@ Currently, two official plugins are available:
 
 # AppWrite
 Appwrite's open-source platform lets you add Auth, DBs, Functions, and Storage to your product build any application at any scale, own your data, and use your preferred coding languages and tools.
-- https://appwrite.io/
+- https://appwrite.io/.
+
 For Configuration:
 - https://cloud.appwrite.io/login?redirect=/console
