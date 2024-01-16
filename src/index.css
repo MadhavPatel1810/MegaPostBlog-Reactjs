@@ -3,5 +3,14 @@
 @tailwind utilities;
 
 body{
-  background-color: rgb(78, 82, 85);
+  /* background-color: rgb(78, 82, 85); */
+  background-color: #f2f2f3;
+}
+.blog_card{
+    margin: 25px auto;
+    max-width: 1200px;
+    border: 0;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #fff;
 }
