@@ -29,7 +29,7 @@ const useService = () => {
         }
       );
     } catch (error) {
-      console.log("Appwrite serive :: createPost :: error", error);
+      console.log("AppWrite service :: createPost :: error", error);
     }
   };
 
