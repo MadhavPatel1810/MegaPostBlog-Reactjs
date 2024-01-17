@@ -28,7 +28,7 @@ const Layout = () => {
   }, []);
 
   return !loading ? (
-    <div className="min-h-screen flex flex-wrap content-between bg-gray-400 blog_card">
+    <div className="min-h-screen flex flex-wrap content-between blog_card bg-gradient-to-r from-slate-950 to-sky-800 glassEffect">
       <div className="w-full block">
         <Header />
         <main>

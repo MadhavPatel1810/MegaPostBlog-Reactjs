@@ -3,8 +3,7 @@
 @tailwind utilities;
 
 body{
-  /* background-color: rgb(78, 82, 85); */
-  background-color: #f2f2f3;
+  background-color: #585e6a;
 }
 .blog_card{
     margin: 25px auto;
