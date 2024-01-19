@@ -8,7 +8,6 @@ const Header = () => {
   const navigate = useNavigate();
   const { pathname } = useLocation();
   const { authStatus } = useSelector((state) => state.auth);
-  console.log("pathname", pathname);
   const navItems = [
     {
       name: "Home",
