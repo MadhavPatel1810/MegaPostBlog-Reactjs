@@ -22,7 +22,7 @@ const Login = () => {
       const session = await authService.login(data);
       if (session) {
         const userData = await authService.getCurrentUser();
-        if (userData) dispatch(authLogin({userData}));
+        if (userData) dispatch(authLogin({ userData }));
         navigate("/");
       }
     } catch (error) {
@@ -36,7 +36,7 @@ const Login = () => {
       >
         <div className="mb-2 flex justify-center">
           <span className="inline-block w-full max-w-[100px]">
-            <Logo width="100%" />
+            <Logo width="50px" />
           </span>
         </div>
         <h2 className="text-center text-2xl font-bold leading-tight">

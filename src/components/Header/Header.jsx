@@ -1,12 +1,14 @@
 import { useSelector } from "react-redux";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Container from "../container/Container";
 import Logo from "../common/Logo";
 import LogoutBtn from "./LogoutBtn";
 
 const Header = () => {
   const navigate = useNavigate();
+  const { pathname } = useLocation();
   const { authStatus } = useSelector((state) => state.auth);
+  console.log("pathname", pathname);
   const navItems = [
     {
       name: "Home",
@@ -41,16 +43,20 @@ const Header = () => {
         <nav className="flex">
           <div className="mr-4">
             <Link to="/">
-              <Logo width="70px" />
+              <Logo width="50px" />
             </Link>
           </div>
           <ul className="flex ml-auto">
             {navItems.map((item) =>
               item.active ? (
-                <li key={item.name}>
+                <li key={item.name} className="mx-1 flex content-center">
                   <button
                     onClick={() => navigate(item.slug)}
-                    className="inline-bock px-6 py-2 duration-200 hover:bg-blue-100 rounded-full"
+                    className={`inline-bock px-6 py-2 duration-200 hover:bg-blue-100 rounded-full ${
+                      item?.slug === pathname
+                        ? "bg-blue-100 border border-sky-500"
+                        : ""
+                    }`}
                   >
                     {item.name}
                   </button>
@@ -58,7 +64,7 @@ const Header = () => {
               ) : null
             )}
             {authStatus && (
-              <li>
+              <li className="mx-1 flex content-center">
                 <LogoutBtn />
               </li>
             )}
